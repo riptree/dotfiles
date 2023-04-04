@@ -28,14 +28,21 @@ chsh -s /usr/local/bin/fish
 
 ## Setup Config
 
-install GNU Stow
+GNU Stow をインストール
 
 ```shell
 brew install stow
 ```
 
-create symbolic link
+シンボリックリンクを作成
 
 ```shell
-stow -R -v -d . -t ~ tmux
+rm -rf ~/.config/fish
+stow -R -v -d . -t ~ tmux fish
+```
+
+シンボリックリンクを削除
+
+```shell
+stow -R -v -D -d . -t ~ fish tmux
 ```
