@@ -26,6 +26,24 @@ sudo vi /etc/shells
 chsh -s /usr/local/bin/fish
 ```
 
+### fisher
+
+```shell
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+```
+
+### ghq
+
+```shell
+brew install ghq
+```
+
+### peco
+
+```shell
+brew install peco
+```
+
 ## Setup Config
 
 GNU Stow をインストール
