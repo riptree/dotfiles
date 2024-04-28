@@ -15,8 +15,6 @@ set -g theme_hostname always
 
 # Environment variable
 
-# set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths
-
 # aliases
 alias vi="nvim"
 alias vim="nvim"
@@ -29,12 +27,40 @@ alias aaa="cd ../../.."
 alias aaaa="cd ../../../.."
 alias aaaaa="cd ../../../../.."
 alias g="git"
+alias gb="git branch"
+alias gs="git status"
+alias gsw="git switch"
+alias k="kubectl"
+
+# homebrew
+set PATH /opt/homebrew/bin $PATH
 
 # rbenv
 set -x PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and source (rbenv init -|psub)
 
+# pyenv
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PATH $PYENV_ROOT/bin
+pyenv init - | source
+
 # GOPATH
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
+set -x GOROOT (go1.21.5 env GOROOT)
+set -x PATH $PATH $GOROOT/bin
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
+
+# Cargo
+set -gx CARGO_HOME $HOME/.cargo
+fish_add_path $CARGO_HOME/bin
+
+# volta
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+# GitHub CLI
+eval (gh completion -s fish | source)
