@@ -44,6 +44,18 @@ brew install ghq
 brew install peco
 ```
 
+### fzf
+
+```shell
+brew install fzf
+```
+
+### eza
+
+```shell
+brew install eza
+```
+
 ## Setup Config
 
 GNU Stow をインストール
