@@ -1,1 +1,4 @@
 fish/.config/fish/config.fish.backup
+fish/.config/fish/fish_history
+fish/.config/fish/fishd.*
+fish/.config/fish/fish_variables
