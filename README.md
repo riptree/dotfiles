@@ -68,11 +68,11 @@ brew install stow
 
 ```shell
 rm -rf ~/.config/fish
-stow -R -v -d . -t ~ tmux fish nvim
+stow -R -v -d . -t ~ tmux fish nvim wezterm
 ```
 
 シンボリックリンクを削除
 
 ```shell
-stow -R -v -D -d . -t ~ fish tmux nvim
+stow -R -v -D -d . -t ~ fish tmux nvim wezterm
 ```
