@@ -2,6 +2,7 @@ function fish_user_key_bindings
   # fzf
   bind \cr fzf_select_history # Bind for fzf select history to Ctrl+R
   bind \ct fzf_change_directory # Bind for fzf change directory to Ctrl+T
+  bind \cb fzf_git_branch
 
   # vim-like
   #bind \cl forward-char

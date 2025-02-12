@@ -36,6 +36,7 @@ eval (gh completion -s fish | source)
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+# warp用
 function r
     set repo_name (ghq list | fzf)
 
@@ -44,6 +45,7 @@ function r
     end
 end
 
+# warp用
 function b
   set branch (git branch --sort=-committerdate | fzf --reverse)
   if test -n "$branch"
