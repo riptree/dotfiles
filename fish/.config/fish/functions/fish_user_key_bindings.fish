@@ -1,7 +1,7 @@
 function fish_user_key_bindings
-  # peco
-  bind \cr peco_select_history # Bind for peco select history to Ctrl+R
-  bind \ct peco_change_directory # Bind for peco change directory to Ctrl+F
+  # fzf
+  bind \cr fzf_select_history # Bind for fzf select history to Ctrl+R
+  bind \ct fzf_change_directory # Bind for fzf change directory to Ctrl+T
 
   # vim-like
   #bind \cl forward-char
