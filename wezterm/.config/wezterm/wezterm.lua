@@ -31,4 +31,9 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     }
 end)
 
+config.keys = require("keybinds").keys
+config.key_tables = require("keybinds").key_tables
+
+config.leader = { key = "g", mods = "CTRL", timeout_milliseconds = 2000 }
+
 return config
